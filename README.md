@@ -52,21 +52,7 @@ python ccf_s1d.py spectrum.fits mask.fits --velorange 200 --velostep 0.5 --outdi
 
 This command will compute the CCF for `spectrum.fits` using `mask.fits`, with a velocity range of 200 km/s and a velocity step of 0.5 km/s. The output will be saved in the `./output` directory.
 
-## Functions
+### Output
 
-### `roll_frac(input_map, dv)`
-
-Rolls an array by a fraction of an element.
-
-### `gauss(v, mu, fwhm, depth)`
-
-Generates a Gaussian profile.
-
-### `doppler(wave, velocity)`
-
-Applies relativistic Doppler shift to a wavelength array.
-
-### `compute_ccf(file, mask, bands=None, velorange=100, velostep=1, outdir=None)`
-
-Computes the cross-correlation function (CCF) for a given spectrum and mask.
+Outputs are fits tables with a CCF per bandpass. There is one fits table per input file and the original header is preserved as much as possible. The CCF is expressed subtracted from the BERV contribution (i.e., in the Solar System and not Earth rest frame).
 
