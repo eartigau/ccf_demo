@@ -13,7 +13,7 @@ There's no proper installation script yet (we're working on that). You download 
 ```wget -O ccf_s1d.py https://github.com/eartigau/ccf_demo/raw/refs/heads/main/ccf_s1d.py```
 
 ## Masks
-Two representative masks can be downloaded in this [sample directory](https://www.astro.umontreal.ca/~artigau/masks/))
+Two representative masks can be downloaded in this [online mask repository](https://www.astro.umontreal.ca/~artigau/masks/)
 
 ## Requirements
 
