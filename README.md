@@ -12,6 +12,12 @@ There's no proper installation script yet (we're working on that). You download 
 
 ```wget -O ccf_s1d.py https://github.com/eartigau/ccf_demo/raw/refs/heads/main/ccf_s1d.py```
 
+## Running on a custom mask domain
+
+Check the demo code `demo_ccf_subdomain.py` to get started. This allows for a custom domain definition for your CCF, but you will *need to edit the code* to point to the proper folder and mask location. This can generate some nice CCF plots such as the this one:
+
+![Nice CCF](ccf_demo.png)
+
 ## Masks
 Two representative masks can be downloaded in this [online mask repository](https://www.astro.umontreal.ca/~artigau/masks/)
 
