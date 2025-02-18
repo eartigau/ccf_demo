@@ -2,6 +2,10 @@
 
 This project contains a Python script `ccf_s1d.py` that computes the cross-correlation function (CCF) for a given spectrum and mask. The script uses various libraries such as `astropy`, `numpy`, `scipy`, and `argparse`.
 
+This code expects APERO s1d (either 'v' or 'w' format) files as inputs and a mask as defined inside the LBL architecture or taken from APERO outputs.
+
+Note that if you call the code from another Python code, you can define your own bandpasses.
+
 ## Requirements
 
 - Python 3.x
@@ -20,12 +24,12 @@ pip install astropy numpy scipy
 To run the script, use the following command:
 
 ```sh
-python ccf_s1d.py <spectrum_file> <mask_file> [--velorange VELO_RANGE] [--velostep VELO_STEP] [--outdir OUTPUT_DIR]
+python ccf_s1d.py <spectrum_file(s)> <mask_file> [--velorange VELO_RANGE] [--velostep VELO_STEP] [--outdir OUTPUT_DIR]
 ```
 
 ### Arguments
 
-- `<spectrum_file>`: Path(s) to the input spectrum file(s).
+- `<spectrum_file(s)>`: Path(s) to the input spectrum file(s).
 - `<mask_file>`: Path to the mask file.
 - `--velorange VELO_RANGE`: Velocity range for the CCF (default: 100).
 - `--velostep VELO_STEP`: Velocity step for the CCF (default: 1).
@@ -57,6 +61,3 @@ Applies relativistic Doppler shift to a wavelength array.
 
 Computes the cross-correlation function (CCF) for a given spectrum and mask.
 
-## License
-
-This project is licensed under the MIT License.
