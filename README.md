@@ -8,9 +8,12 @@ Note that if you call the code from another Python code, you can define your own
 
 ## Installation
 
-There's no proper installation script yet (we're working on that). You simply download the Python script and put it in the science folder of your LBL installation. If you are 100% lazy, you can just run the following command on a Linux station:
+There's no proper installation script yet (we're working on that). You download the Python script and put it in the science folder of your LBL installation. If you are 100% lazy, you can just run the following command on a Linux station:
 
 ```wget -O ccf_s1d.py https://github.com/eartigau/ccf_demo/raw/refs/heads/main/ccf_s1d.py```
+
+## Masks
+Two representative masks can be downloaded in this [sample directory](https://www.astro.umontreal.ca/~artigau/masks/))
 
 ## Requirements
 
