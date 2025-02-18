@@ -47,7 +47,7 @@ python ccf_s1d.py <spectrum_file(s)> <mask_file> [--velorange VELO_RANGE] [--vel
 ### Example
 
 ```sh
-python ccf_s1d.py spectrum.fits mask.fits --velorange 200 --velostep 0.5 --outdir ./output
+python ccf_s1d.py data/???????o_pp_s1d_v_tcorr_AB.fits mask/WASP52_neg.fits --velorange 200 --velostep 0.5 --outdir ./my_ccfs
 ```
 
 This command will compute the CCF for `spectrum.fits` using `mask.fits`, with a velocity range of 200 km/s and a velocity step of 0.5 km/s. The output will be saved in the `./output` directory.
