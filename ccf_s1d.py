@@ -47,7 +47,7 @@ def doppler(wave, velocity):
     """
     return wave * np.sqrt((1 + velocity / c) / (1 - velocity / c))
 
-def compute_ccf(file, mask, bands=None, velorange=100, velostep=1, outdir=None):
+def compute_ccf(file, mask_file, bands=None, velorange=100, velostep=1, outdir=None):
     """
     Compute the cross-correlation function (CCF) for a given spectrum and mask
     :param file: path to the input spectrum file
@@ -70,7 +70,9 @@ def compute_ccf(file, mask, bands=None, velorange=100, velostep=1, outdir=None):
     # test if outname exists and skip if it does
     if os.path.exists(outname):
         print(f'{outname} already exists, skipping')
-        return
+        tbl = Table.read(outname)
+
+        return tbl
 
 
     if bands is None:
@@ -89,6 +91,8 @@ def compute_ccf(file, mask, bands=None, velorange=100, velostep=1, outdir=None):
     tbl_spectrum = Table.read(file)
     h = fits.getheader(file)
     berv = h['BERV']
+
+    mask = Table.read(mask_file)
 
     for band in bands.keys():
         print(f'Processing band {band}')
