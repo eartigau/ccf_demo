@@ -141,12 +141,9 @@ def main():
 
     args = parser.parse_args()
 
-    # Read the mask file
-    mask = Table.read(args.mask)
-
     # Compute the CCF for each input file
     for file in args.files:
-        compute_ccf(file, mask, velorange=args.velorange, velostep=args.velostep, outdir=args.outdir)
+        compute_ccf(file, args.mask, velorange=args.velorange, velostep=args.velostep, outdir=args.outdir)
 
 if __name__ == '__main__':
     main()
